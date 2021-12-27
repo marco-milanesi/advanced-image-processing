@@ -3,7 +3,7 @@
 
    -  **RGB color space** 
 
-```matlab:Code
+```Matlab
 % Text formatting
 t_s = '\fontsize{12}\color{black}\bf'; 
 s_s = '\fontsize{12}\color{gray}\rm'; 
