@@ -1,5 +1,9 @@
 # 1 - Color Image Acquisition
-## 1.1 Color spaces
+## Table of contents
+- [Color spaces](#1.1Colorspaces)
+- [Color image acquisition - demosaicing](#1.2Demosaicing)
+
+## 1.1 Color spaces <a name="1.1Colorspaces"></a>
 
    -  **RGB color space** 
 
@@ -56,7 +60,7 @@ subplot(2,4,8), imshow(img_YCrCb(:,:,3)); title('Cr')
 
 ![figure_1.png](README_images/figure_1.png)
 
-## 1.2 Color image acquisition - demosaicing
+## 1.2 Color image acquisition - demosaicing <a name="1.2Demosaicing"></a>
 
 ```Matlab
 figure
