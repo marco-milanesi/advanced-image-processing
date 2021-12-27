@@ -1,11 +1,13 @@
 # 1 - Color Image Acquisition
 ## Table of contents
 - [Color spaces](#1.1Colorspaces)
-- [Color image acquisition - demosaicing](#1.2Demosaicing)
+   * [RGB color space](#RGB)
+   * [HSV and YCbCr color spaces](#HSV)
+- [Color image demosaicing](#1.2Demosaicing)
 
 ## 1.1 Color spaces <a name="1.1Colorspaces"></a>
 
-   -  **RGB color space** 
+   -  **RGB color space** <a name="RGB"></a>
 
 ```Matlab
 % Text formatting
@@ -38,7 +40,7 @@ subplot(2,4,8), imshow(just_blue); title('B')
 
 ![figure_0.png](README_images/figure_0.png)
 
-   -  **HSV and YCbCr color spaces** 
+   -  **HSV and YCbCr color spaces**  <a name="HSV"></a>
 
 It doesn’t make sense to show the image in HSV and YCbCr since they loss visual meaning because: 
 
