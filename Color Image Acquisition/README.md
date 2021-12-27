@@ -40,6 +40,14 @@ subplot(2,4,8), imshow(just_blue); title('B')
 
    -  **HSV and YCbCr color spaces** 
 
+It doesn’t make sense to show the image in HSV and YCbCr since they loss visual meaning because: 
+
+In **YCbCr** color space, luminance information is stored as a single component (Y), and chrominance information is stored as two color-difference components (Cb and Cr). Cb represents the difference between the blue component and reference value. Cr represents the difference between the red component and a reference value.
+
+**HSV** is a cylindrical color model that remaps the RGB primary colors into dimensions that are easier for humans to understand. Hue specifies the angle of the color on the RGB color circle, Saturation controls the amount of color used and Value controls the brightness of the color. 
+
+> This is very useful in many applications. In RGB colorspace, the shadow part of an object will most likely have very different characteristics than the  part without shadows. On the other hand, in HSV colorspace, the hue component of both patches of the object is more likely to be similar: the shadow will primarily influence the value, or maybe satuation component, while the hue, indicating the primary "color" should not change so much.**
+
 ```Matlab
 figure
 img_hsv = rgb2hsv(img_rgb);
