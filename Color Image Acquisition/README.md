@@ -36,7 +36,7 @@ subplot(2,4,8), imshow(just_blue); title('B')
 
    -  **HSV and YCbCr color spaces** 
 
-```matlab:Code
+```Matlab
 figure
 img_hsv = rgb2hsv(img_rgb);
 img_YCrCb = rgb2ycbcr(img_rgb);
@@ -58,7 +58,7 @@ subplot(2,4,8), imshow(img_YCrCb(:,:,3)); title('Cr')
 
 ## 1.2 Color image acquisition - demosaicing
 
-```matlab:Code
+```Matlab
 figure
 img = imread("images\IMG_014_srgb_CFA.png");
 h = subplot(1,5,1);
@@ -90,9 +90,3 @@ title(h, formattedText);
 
 ![figure_2.png](README_images/figure_2.png)
 
-```matlab:Code
-
-```
-
-***
-*Generated from color_image_acquisition.mlx with [Live Script to Markdown Converter](https://github.com/roslovets/Live-Script-to-Markdown-Converter)*
