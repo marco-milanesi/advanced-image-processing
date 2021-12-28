@@ -1,9 +1,9 @@
 # 2 - Linear filters
 
-- [2 - Linear filters](#2---linear-filters)
-  - [Effect of filtering on noisy images](#effect-of-filtering-on-noisy-images)
-  - [Unsharp masking](#unsharp-masking)
-  - [Sharpening with Laplacian filter](#sharpening-with-laplacian-filter)
+
+ - [Effect of filtering on noisy images](#effect-of-filtering-on-noisy-images)
+ - [Unsharp masking](#unsharp-masking)
+ - [Sharpening with Laplacian filter](#sharpening-with-laplacian-filter)
   
 ## Effect of filtering on noisy images
 
