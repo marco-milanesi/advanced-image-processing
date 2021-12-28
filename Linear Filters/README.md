@@ -1,7 +1,7 @@
 # 2 - Linear filters
 ## Effect of filtering on noisy images
 
-```matlab:Code
+```Matlab
 img_lena = imread("images\lena_gray_512.tif");
 
 img_noise_array = imnoise(img_lena,"gaussian",0.2);
@@ -59,7 +59,7 @@ end
 
 ## Unsharp masking
 
-```matlab:Code
+```Matlab
 figure
 img_cameraman = imread("images\cameraman.tif");
 subplot(3,4,1), imshow(img_cameraman(80:220,180:320)); title('Original Image')
@@ -94,7 +94,7 @@ img_unsharp_3 = img_diff + img_cameraman; subplot(3,4,12), imshow(img_unsharp_3(
 
 ![figure_2.png](README_images/figure_2.png)
 
-```matlab:Code
+```Matlab
 
 % Histogram evaluation
 figure
@@ -112,7 +112,7 @@ subplot(4,2,8), imhist(img_unsharp_3); title('Histogram')
 
 ## Sharpening with Laplacian filter
 
-```matlab:Code
+```Matlab
 figure
 img_cameraman = imread("cameraman.tif"); subplot(3,3,1), imshow(img_cameraman(80:220,180:320)); title('Input Image')
 
@@ -137,7 +137,7 @@ subplot(3,3,9), imshow(sharpened_image_3(80:220,180:320)); title('Sharpened Imag
 
 ![figure_4.png](README_images/figure_4.png)
 
-```matlab:Code
+```Matlab
 
 % Sharpness evaluation
 figure
@@ -160,9 +160,4 @@ text(30,150,string(estimate_sharpness(sharpened_image_3)),'FontSize',15,'Color',
 
 ![figure_5.png](README_images/figure_5.png)
 
-```matlab:Code
 
-```
-
-***
-*Generated from linear_filters.mlx with [Live Script to Markdown Converter](https://github.com/roslovets/Live-Script-to-Markdown-Converter)*
