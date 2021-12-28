@@ -1,13 +1,13 @@
 # Linear filters - functions
 
-## Table of contents
-
-- [Gaussian smoothing filter](#gaussian-smoothing-filter)
-- [Mean filter](#mean-filter)
-- [Linear filter filter](#linear-filter-filter)
-- [Sharpness estimation](#sharpness-estimation)
+  - [Gaussian smoothing filter](#gaussian-smoothing-filter)
+  - [Mean filter](#mean-filter)
+  - [Linear filter filter](#linear-filter-filter)
+  - [Sharpness estimation](#sharpness-estimation)
 
 ## Gaussian smoothing filter
+
+$G(x,y) =  \frac{1}{2 \pi \sigma^2} e^{-\frac{x^2 + y^2}{2 \sigma^2}}$
 
 ```Matlab
 function output_img = gaussian_smoothing_filter (img, a, b, sigma)
@@ -62,7 +62,7 @@ output_img = uint8(output_img);
 end
 ```
 
-## Linear filter filter
+## Linear filter
 
 ```Matlab
 function output_img = linear_filter(img, mask)
