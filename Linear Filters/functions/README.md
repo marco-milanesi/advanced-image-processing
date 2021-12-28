@@ -2,7 +2,7 @@
 
   - [Gaussian smoothing filter](#gaussian-smoothing-filter)
   - [Mean filter](#mean-filter)
-  - [Linear filter filter](#linear-filter)
+  - [Linear filter](#linear-filter)
   - [Sharpness estimation](#sharpness-estimation)
 
 ## Gaussian smoothing filter
