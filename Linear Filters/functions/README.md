@@ -2,14 +2,14 @@
 
   - [Gaussian smoothing filter](#gaussian-smoothing-filter)
   - [Mean filter](#mean-filter)
-  - [Linear filter](#linear-filter)
+  - [Linear filter filter](#linear-filter)
   - [Sharpness estimation](#sharpness-estimation)
 
 ## Gaussian smoothing filter
 In 2-D, an isotropic (i.e. circularly symmetric) Gaussian has the form:
 
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;G(x,y) =  \frac{1}{2 \pi \sigma^2} e^{-\frac{x^2 + y^2}{2 \sigma^2}}" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;G(x,y) =  \frac{1}{2 \pi \sigma^2} e^{-\frac{x^2 + y^2}{2 \sigma^2}}"/></center>
 
 where $\sigma$ is the standard deviation of the distribution. This distribution is shown in the following Figure
 
@@ -96,6 +96,13 @@ end
 
 ## Linear filter
 
+In image processing, a kernel, convolution matrix, or mask is a small matrix used for blurring, sharpening, embossing, edge detection, and more. This is accomplished by doing a convolution between the kernel and an image.
+
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space; g(x,y)=\omega *f(x,y)=\sum _{dx=-a}^{a}{\sum _{dy=-b}^{b}{\omega (dx,dy)f(x+dx,y+dy)}}"/></center>
+
+where <img src="https://latex.codecogs.com/svg.latex?\&space; g(x,y)"/> is the filtered image, <img src="https://latex.codecogs.com/svg.latex?\&space; f(x,y)"/> is the original image, <img src="https://latex.codecogs.com/svg.latex?\&space; \omega"/>  is the filter kernel. Every element of the filter kernel is considered by <img src="https://latex.codecogs.com/svg.latex?\&space; -a\leq dx\leq a"/>  and <img src="https://latex.codecogs.com/svg.latex?\&space; -b\leq dy\leq b"/>. 
+
+Depending on the element values, a kernel can cause a wide range of effects.
 ```Matlab
 function output_img = linear_filter(img, mask)
 
