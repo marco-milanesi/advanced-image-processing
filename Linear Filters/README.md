@@ -8,6 +8,11 @@ In image processing filters are mainly used to suppress either the high frequenc
   
 ## Effect of filtering on noisy images
 
+|       Filter       |                                                                                                                                                            Brief Description                                                                                                                                                            | How it works |
+|:------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------:|
+|     Mean Filter    |                                                           Mean filtering is a simple, intuitive and easy to implement method of smoothing images, i.e. reducing the amount of intensity variation between one pixel and the next. It is often used to reduce noise in images.                                                           |              |
+| Gaussian Smoothing | The Gaussian smoothing operator is a 2-D convolution operator that is used to "blur" images and remove detail and noise. In this sense it is similar to the mean filter, but it uses a different kernel that represents the shape of a Gaussian (`bell-shaped') hump. This kernel has some special properties which are detailed below. |              |
+
 ```Matlab
 img_lena = imread("images\lena_gray_512.tif");
 
