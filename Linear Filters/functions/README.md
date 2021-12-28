@@ -2,12 +2,37 @@
 
   - [Gaussian smoothing filter](#gaussian-smoothing-filter)
   - [Mean filter](#mean-filter)
-  - [Linear filter filter](#linear-filter-filter)
+  - [Linear filter filter](#linear-filter)
   - [Sharpness estimation](#sharpness-estimation)
 
 ## Gaussian smoothing filter
+In 2-D, an isotropic (i.e. circularly symmetric) Gaussian has the form:
 
-$G(x,y) =  \frac{1}{2 \pi \sigma^2} e^{-\frac{x^2 + y^2}{2 \sigma^2}}$
+$$
+G(x,y) =  \frac{1}{2 \pi \sigma^2} e^{-\frac{x^2 + y^2}{2 \sigma^2}}
+$$
+
+where $\sigma$ is the standard deviation of the distribution. This distribution is shown in the following Figure
+
+
+<p align="center">
+  <img width="60%" height="60%" src=README_images/gauss2.gif>
+  <center><em>2-D Gaussian distribution with mean (0,0) and sigma=1</em></center>
+</p>
+
+
+
+The effect of Gaussian smoothing is to blur an image, in a similar fashion to the mean filter. The degree of smoothing is determined by the standard deviation of the Gaussian. The Gaussian outputs a "weighted average" of each pixel's neighborhood, with the average weighted more towards the value of the central pixels. This is in contrast to the mean filter's uniformly weighted average. Because of this, a Gaussian provides gentler smoothing and preserves edges better than a similarly sized mean filter.
+
+
+By looking at the following figure it shows the frequency responses of a 1-D mean filter with width 5 and also of a Gaussian filter with $\sigma$ = 3.
+
+<p align="center">
+  <img width="70%" height="70%" src=README_images/gausfreq.gif>
+</p>
+
+Both filters attenuate high frequencies more than low frequencies, but the mean filter exhibits oscillations in its frequency response. So by choosing an appropriately sized Gaussian filter we can be fairly  confident about what range of spatial frequencies are still present in the image after filtering, which is not the case of the mean filter. 
+
 
 ```Matlab
 function output_img = gaussian_smoothing_filter (img, a, b, sigma)
@@ -39,6 +64,14 @@ end
 ```
 
 ## Mean filter
+The idea of mean filtering is simply to replace each pixel value in an image with the mean (`average') value of its neighbors, including itself. This has the effect of eliminating pixel values which are unrepresentative of their surroundings. Mean filtering is usually thought of as a convolution filter. Like other convolutions it is based around a kernel, which represents the shape and size of the neighborhood to be sampled when calculating the mean. Often a 3×3 square kernel is used, as shown in Figure 1, although larger kernels (e.g. 5×5 squares) can be used for more severe smoothing. 
+
+<p align="center">
+  <img width="30%" src=README_images/mean3x3.gif>
+  <center><em>3×3 averaging kernel often used in mean filtering</em></center>
+</p>
+
+
 
 ```Matlab
 function output_img = mean_filter(img,a,b)
