@@ -1,10 +1,11 @@
 # Linear filters - functions
 
-- [Linear filters - functions](#linear-filters---functions)
-  - [Gaussian smoothing filter](#gaussian-smoothing-filter)
-  - [Mean filter](#mean-filter)
-  - [Linear filter filter](#linear-filter-filter)
-  - [Sharpness estimation](#sharpness-estimation)
+## Table of contents
+
+- [Gaussian smoothing filter](#gaussian-smoothing-filter)
+- [Mean filter](#mean-filter)
+- [Linear filter filter](#linear-filter-filter)
+- [Sharpness estimation](#sharpness-estimation)
 
 ## Gaussian smoothing filter
 
