@@ -8,9 +8,8 @@
 ## Gaussian smoothing filter
 In 2-D, an isotropic (i.e. circularly symmetric) Gaussian has the form:
 
-$$
-G(x,y) =  \frac{1}{2 \pi \sigma^2} e^{-\frac{x^2 + y^2}{2 \sigma^2}}
-$$
+
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;G(x,y) =  \frac{1}{2 \pi \sigma^2} e^{-\frac{x^2 + y^2}{2 \sigma^2}}" /></center>
 
 where $\sigma$ is the standard deviation of the distribution. This distribution is shown in the following Figure
 
