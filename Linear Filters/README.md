@@ -53,11 +53,14 @@ while (noise_type <= 2)
 end
 ```
 
+By looking at the PNSR values it is self-explanatory that Gaussian filter works better with Gaussian noise, while Arithmetic Mean Filter works better with Salt & Peppers noise. In both cases the most accomplished results are obtained for a mask with the dimension of 5 x 5. 
+
 ![figure_0.png](README_images/figure_0.png)
 
 ![figure_1.png](README_images/figure_1.png)
 
 ## Unsharp masking
+The unsharp filter is a simple sharpening operator which derives its name from the fact that it enhances edges (and other high frequency components in an image) via a procedure which subtracts a smoothed (for instance from mean or gaussian filter), version of an image from the original image.
 
 ```Matlab
 figure
@@ -94,6 +97,9 @@ img_unsharp_3 = img_diff + img_cameraman; subplot(3,4,12), imshow(img_unsharp_3(
 
 ![figure_2.png](README_images/figure_2.png)
 
+On below subplots we can see original and sharpen images. Taking a look histograms show that differences between original and third  image are very small, while the first and the second ones look brithter. Moreover, unsharp method can be used in contrast improving, in fact by taking a closer look at the image and to the histogram, reveals that contrast is enhanced. 
+
+
 ```Matlab
 
 % Histogram evaluation
@@ -110,7 +116,14 @@ subplot(4,2,8), imhist(img_unsharp_3); title('Histogram')
 
 ![figure_3.png](README_images/figure_3.png)
 
+The drawback of unsharp mask is the fact that it has accentuated the noise. In fact if we consider the same algorithm applied to the image with gaussian noise:
+
+![figure_3b.png](README_images/figure_3b.png)
+
+
+
 ## Sharpening with Laplacian filter
+The Laplacian of an image highlights regions of rapid intensity change and is therefore often used for edge detection. 
 
 ```Matlab
 figure
@@ -137,8 +150,9 @@ subplot(3,3,9), imshow(sharpened_image_3(80:220,180:320)); title('Sharpened Imag
 
 ![figure_4.png](README_images/figure_4.png)
 
-```Matlab
 
+
+```Matlab
 % Sharpness evaluation
 figure
 subplot(4,2,1), imshow(img_cameraman); title('Test image')
