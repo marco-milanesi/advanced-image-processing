@@ -1,6 +1,7 @@
 # 2 - Linear filters
+In image processing filters are mainly used to suppress either the high frequencies in the image, i.e. smoothing the image, or the low frequencies, i.e. enhancing or detecting edges in the image.
 
-
+## Table of contents
  - [Effect of filtering on noisy images](#effect-of-filtering-on-noisy-images)
  - [Unsharp masking](#unsharp-masking)
  - [Sharpening with Laplacian filter](#sharpening-with-laplacian-filter)
