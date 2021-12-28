@@ -9,9 +9,9 @@
 In 2-D, an isotropic (i.e. circularly symmetric) Gaussian has the form:
 
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;G(x,y) =  \frac{1}{2 \pi \sigma^2} e^{-\frac{x^2 + y^2}{2 \sigma^2}}"/></center>
+![](https://latex.codecogs.com/svg.latex?\Large&space;G(x,y)=\frac{1}{2\pi\sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}) 
 
-where $\sigma$ is the standard deviation of the distribution. This distribution is shown in the following Figure
+where ![](https://latex.codecogs.com/svg.latex?&space;\sigma)  is the standard deviation of the distribution. This distribution is shown in the following Figure
 
 
 <p align="center">
@@ -24,7 +24,7 @@ where $\sigma$ is the standard deviation of the distribution. This distribution 
 The effect of Gaussian smoothing is to blur an image, in a similar fashion to the mean filter. The degree of smoothing is determined by the standard deviation of the Gaussian. The Gaussian outputs a "weighted average" of each pixel's neighborhood, with the average weighted more towards the value of the central pixels. This is in contrast to the mean filter's uniformly weighted average. Because of this, a Gaussian provides gentler smoothing and preserves edges better than a similarly sized mean filter.
 
 
-By looking at the following figure it shows the frequency responses of a 1-D mean filter with width 5 and also of a Gaussian filter with $\sigma$ = 3.
+By looking at the following figure it shows the frequency responses of a 1-D mean filter with width 5 and also of a Gaussian filter with ![](https://latex.codecogs.com/svg.latex?&space;\sigma=3).
 
 <p align="center">
   <img width="70%" height="70%" src=README_images/gausfreq.gif>
@@ -98,9 +98,10 @@ end
 
 In image processing, a kernel, convolution matrix, or mask is a small matrix used for blurring, sharpening, embossing, edge detection, and more. This is accomplished by doing a convolution between the kernel and an image.
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space; g(x,y)=\omega *f(x,y)=\sum _{dx=-a}^{a}{\sum _{dy=-b}^{b}{\omega (dx,dy)f(x+dx,y+dy)}}"/></center>
+![](https://latex.codecogs.com/svg.latex?&space;g(x,y)=\omega*f(x,y)=\sum_{dx=-a}^{a}{\sum_{dy=-b}^{b}{\omega(dx,dy)f(x+dx,y+dy)}})
 
-where <img src="https://latex.codecogs.com/svg.latex?\&space; g(x,y)"/> is the filtered image, <img src="https://latex.codecogs.com/svg.latex?\&space; f(x,y)"/> is the original image, <img src="https://latex.codecogs.com/svg.latex?\&space; \omega"/>  is the filter kernel. Every element of the filter kernel is considered by <img src="https://latex.codecogs.com/svg.latex?\&space; -a\leq dx\leq a"/>  and <img src="https://latex.codecogs.com/svg.latex?\&space; -b\leq dy\leq b"/>. 
+
+where ![](https://latex.codecogs.com/svg.latex?&space;g(x,y)) is the filtered image, ![](https://latex.codecogs.com/svg.latex?&space;f(x,y)) is the original image, ![](https://latex.codecogs.com/svg.latex?&space;\omega) is the filter kernel. 
 
 Depending on the element values, a kernel can cause a wide range of effects.
 ```Matlab
