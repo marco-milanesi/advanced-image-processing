@@ -1,7 +1,7 @@
 # Color image filtering
 ## 1a) Image presentation
 
-```matlab:Code
+```matlab
 clc
 clear all
 warning off
@@ -32,7 +32,7 @@ end
 
 You obtain more noise because it apply the noise to the cannel separately
 
-```matlab:Code
+```matlab
 img_gray = rgb2gray(img_1);
 img_gray_noise = imnoise(img_gray,'salt & pepper',0.03);
 count=0;
@@ -51,7 +51,7 @@ fprintf('Gray noise percentage: %.2f\n',count/(size(img_gray,1)*size(img_gray,2)
 Gray noise percentage: 0.03
 ```
 
-```matlab:Code
+```matlab
 
 img_rgb_noise = imnoise(img_1,'salt & pepper',0.03);
 img_rgb_noise_in_gray = rgb2gray(img_rgb_noise);
@@ -76,7 +76,7 @@ RGB noise percentage: 0.06
 
 ## 2a) Scalar RGB median (Marginal Median Filter) 
 
-```matlab:Code
+```matlab
 %Image 1
 figure
 subplot(2,4,1), imshow(img_1);
@@ -103,7 +103,7 @@ end
 
 ![figure_1.png](README_images/figure_1.png)
 
-```matlab:Code
+```matlab
 
 %Image 2
 figure
@@ -134,7 +134,7 @@ end
   
 ## 2b) VMF (Vector Median Filter) 
 
-```matlab:Code
+```matlab
 figure
 subplot(3,4,1), imshow(img_1);
 title('Image 1 (I1)');
@@ -170,7 +170,7 @@ end
 
 ## 3) Comparison of filtering efficiency 
 
-```matlab:Code
+```matlab
 figure
 subplot(3,6,1), imshow(img_1);
 
@@ -281,5 +281,3 @@ title(h, formattedText);
 ```
 
 ![figure_4.png](README_images/figure_4.png)
-
-![figure_5.png](README_images/figure_5.png)
