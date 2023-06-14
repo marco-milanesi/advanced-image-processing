@@ -1,1 +1,3 @@
 # advanced-image-processing
+
+Matlab algorithm developed as part of the AIP course at the Silesian University of Technology. The code includes functions and programs built from scratch (without using the Matlab build-in function) for: images acquisition, color and B&W image filtering through linear and non-linear filters (Mean filter, Gaussian, Laplacian, LUM, median, VMF, unsharp masking), image binarization and fundamental operations of mathematical morphology, measurements of geometrical features of 2D objects, shape factors and unsupervised object classification with k-means and k-nn algorithms, data classification, object detection and recognition.
