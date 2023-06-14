@@ -1,7 +1,7 @@
 # Image Segmentation
 ## 1) Thresholding with a fixed (global) threshold
 
-```matlab:Code
+```matlab
 clc
 clear all
 t_s = '\fontsize{12}\color{black}\bf';
@@ -60,7 +60,7 @@ sgtitle(formattedText);
 
 **2.1) Gaussian Noise**
 
-```matlab:Code
+```matlab
 figure
 % Original image
 h = subplot(3,4,1);
@@ -144,7 +144,7 @@ title(h, formattedText);
 
 **2.2) Salt \& Pepper noise**
 
-```matlab:Code
+```matlab
 figure
 % Original image
 h = subplot(3,4,1);
@@ -228,7 +228,7 @@ title(h, formattedText);
 
 ## 3) Postprocessing - morphological operations 
 
-```matlab:Code
+```matlab
 subplot(3,5,1),imshow(img)
 title('Input image')
 
